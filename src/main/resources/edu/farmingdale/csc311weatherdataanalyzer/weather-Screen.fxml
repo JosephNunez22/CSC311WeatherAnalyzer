@@ -1,14 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="edu.farmingdale.csc311weatherdataanalyzer.WeatherScreenController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="232.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.farmingdale.csc311weatherdataanalyzer.WeatherScreenController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.20001220703125" minWidth="10.0" prefWidth="299.20001220703125" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="384.0" minWidth="10.0" prefWidth="300.79998779296875" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="194.00001373291016" minHeight="10.0" prefHeight="46.40000381469727" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="196.00000228881837" minHeight="10.0" prefHeight="174.39999618530274" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="108.4" minHeight="10.0" prefHeight="38.79998626708985" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER_RIGHT" prefHeight="400.0" prefWidth="281.0" spacing="30.0" style="-fx-background-color: #F67280;" GridPane.rowIndex="1">
+         <children>
+            <Label text="Average Tempature" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label text="Rainy Days " textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label text="Hot Days" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+         </children>
+         <padding>
+            <Insets right="15.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="30.0" style="-fx-background-color: #C06C84;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="averageTempLbl" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="rainyDaysLbl" prefHeight="18.0" prefWidth="73.0" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="hotDaysLbl" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+         </children>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #6C5B7B#355C7D;" GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <children>
+            <Button mnemonicParsing="false" onAction="#loadWeatherDataBtnClicked" style="-fx-background-color: #355C7D;" text="Click Me To Load Weather Analyzer" textFill="WHITE" />
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #F8B195;" GridPane.columnSpan="2">
+         <children>
+            <Label text="Weather Analyzer">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</GridPane>
